@@ -44,7 +44,7 @@ require_once dirname(__FILE__).'/config.php'; ?>
 				</section>
 
 			<?php
-			include _ROOT_PATH.'/app/calckred.php'; ?>
+			include $conf->root_path.'/app/calckred.php'; ?>
 
 
 			<!-- Footer -->
