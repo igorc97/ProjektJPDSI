@@ -1,5 +1,4 @@
 <?php
-class calckred_result{
-    public $op_name;
+class Calckred_result{
     public $result;
 }
