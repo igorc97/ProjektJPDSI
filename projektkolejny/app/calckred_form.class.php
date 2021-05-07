@@ -1,6 +1,7 @@
 <?php
-class Calckred_form {
+class calckred_form {
     public $x;
     public $y;
     public $z;
+
 }

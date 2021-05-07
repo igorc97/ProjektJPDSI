@@ -5,7 +5,7 @@ require_once $conf->root_path.'/app/calckred_form.class.php';
 require_once $conf->root_path.'/app/calckred_result.class.php';
 require_once $conf->root_path.'/lib/Messages.class.php';
 
-class CalcCtrl{
+class calckred_ctrl{
     private $msgs;
     private $form;
     private $result;
@@ -17,7 +17,7 @@ class CalcCtrl{
         $this->result = new Calckred_result();
     }
 
-    public function getParams(&$x,&$y,&$z){
+    public function getParams(){
         $this->form->x = isset($_REQUEST['x']) ? $_REQUEST['x'] : null;
         $this->form->y = isset($_REQUEST['y']) ? $_REQUEST['y'] : null;
         $this->form->z = isset($_REQUEST['z']) ? $_REQUEST['z'] : null;
@@ -66,6 +66,7 @@ class CalcCtrl{
 
         $this->msgs->addInfo('Wykonano obliczenia.');
     }
+        $this->generateView();
 }
 public function generateView()
 {
@@ -82,7 +83,7 @@ public function generateView()
     $smarty->assign('form', $this->form);
     $smarty->assign('res', $this->result);
 
-    $smarty->display($conf->root_path . '/app/calckred_view.php');
+    $smarty->display($conf->root_path . '/app/calckred_view.html');
 }
 }
 

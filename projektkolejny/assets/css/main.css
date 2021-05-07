@@ -3595,7 +3595,17 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
+		.messages {	margin: 1em auto; }
 
+		.err, .inf, .res {
+			padding: 1em 1em 1em 3em;
+			border-radius: 1em;
+			color: #222;
+		}
+
+		.err { background-color: #f88; }
+		.inf { background-color: #8f8; }
+		.res { background-color: #ff0; }
 	}
 
 /* Large */
@@ -3646,7 +3656,17 @@ input, select, textarea {
 			#footer {
 				padding: 4.5em 0;
 			}
+		.messages {	margin: 1em auto; }
 
+		.err, .inf, .res {
+			padding: 1em 1em 1em 3em;
+			border-radius: 1em;
+			color: #222;
+		}
+
+		.err { background-color: #f88; }
+		.inf { background-color: #8f8; }
+		.res { background-color: #ff0; }
 	}
 
 /* Medium */
@@ -3740,7 +3760,17 @@ input, select, textarea {
 			#footer {
 				padding: 4.5em 0;
 			}
+		.messages {	margin: 1em auto; }
 
+		.err, .inf, .res {
+			padding: 1em 1em 1em 3em;
+			border-radius: 1em;
+			color: #222;
+		}
+
+		.err { background-color: #f88; }
+		.inf { background-color: #8f8; }
+		.res { background-color: #ff0; }
 	}
 
 /* Small */
@@ -4043,7 +4073,17 @@ input, select, textarea {
 			#footer {
 				padding: 3.25em 1.5em;
 			}
+		.messages {	margin: 1em auto; }
 
+		.err, .inf, .res {
+			padding: 1em 1em 1em 3em;
+			border-radius: 1em;
+			color: #222;
+		}
+
+		.err { background-color: #f88; }
+		.inf { background-color: #8f8; }
+		.res { background-color: #ff0; }
 	}
 
 /* XSmall */
@@ -4107,5 +4147,15 @@ input, select, textarea {
 						margin: 0;
 						padding: 0;
 					}
+		.messages {	margin: 1em auto; }
 
+		.err, .inf, .res {
+			padding: 1em 1em 1em 3em;
+			border-radius: 1em;
+			color: #222;
+		}
+
+		.err { background-color: #f88; }
+		.inf { background-color: #8f8; }
+		.res { background-color: #ff0; }
 	}
