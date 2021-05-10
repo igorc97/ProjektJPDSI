@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2021-05-07 03:39:26
+/* Smarty version 3.1.30, created on 2021-05-10 23:21:33
   from "C:\xampp\htdocs\projektkolejny\templates\main.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_60949a4e6f3894_54064271',
+  'unifunc' => 'content_6099a3dd39c863_86769718',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e0bd4cb5de0baa8811090c13161faa608b09fa2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projektkolejny\\templates\\main.php',
-      1 => 1620351566,
+      1 => 1620681693,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60949a4e6f3894_54064271 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6099a3dd39c863_86769718 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--
@@ -64,11 +64,11 @@ function content_60949a4e6f3894_54064271 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <a href="#one" class="goto-next scrolly">Next</a>
   </section>
+<!--  TODO: dalej nie działa wygląd strony, poniżej cały czas wyświetla /app/calckred.php...-->
 
   <?php echo '<?php
-			';?>include $conf->root_path.'/app/calckred.php';
+			';?>include $conf->root_path."/app/calckred.php";
   <?php echo '?>';?>
-
 
   <!-- Footer -->
   <footer id="footer">

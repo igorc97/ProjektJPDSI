@@ -13,8 +13,8 @@ class calckred_ctrl{
     public function __construct()
     {
         $this->msgs = new Messages();
-        $this->form = new Calckred_form();
-        $this->result = new Calckred_result();
+        $this->form = new calckred_form();
+        $this->result = new calckred_result();
     }
 
     public function getParams(){
@@ -77,13 +77,13 @@ public function generateView()
 
     $smarty->assign('page_title', 'Kalkulator kredytowy');
     $smarty->assign('page_description', 'Zapraszam do skorzystania z kalkulatora');
-    $smarty->assign('page_header', '');
+    $smarty->assign('page_header', '1234');
 
     $smarty->assign('msgs', $this->msgs);
     $smarty->assign('form', $this->form);
     $smarty->assign('res', $this->result);
 
-    $smarty->display($conf->root_path . '/app/calckred_view.html');
+    $smarty->display($conf->root_path.'/app/calckred_view.html');
 }
 }
 

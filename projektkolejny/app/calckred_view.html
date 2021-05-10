@@ -1,7 +1,5 @@
-{extends file="../templates/main.html"}
-<?php
-require_once dirname(__FILE__).'/config.php';
-?>
+{extends file=$conf->root_path|cat:"/templates/main.php"}
+
 
 <p id="idk">
 <form action="{$conf->app_url}/calckred.php" method="post" class="pure-form pure-form-stacked">
@@ -58,10 +56,11 @@ require_once dirname(__FILE__).'/config.php';
 <pre><code id="kod">
 Tu zostanie wyświetlony wynik :)
 
-<?php if (isset($result)) {
+{
+    <?php if (isset($result)) {
     echo 'Miesięczny koszt kredytu to(powiedzmy, że): '.$result;
 } ?>
-
+}
 
 </code></pre>
 

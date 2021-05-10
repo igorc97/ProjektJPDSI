@@ -1,3 +1,6 @@
+<?php
+require_once dirname(__FILE__).'/config.php';
+?>
 <!DOCTYPE html>
 <!--
 	Landed by HTML5 UP
@@ -9,8 +12,8 @@
   <title>Kalkulator</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="[$conf->app_url]/assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="[$conf->app_url]/assets/css/noscript.css" /></noscript>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload landing">
 <div id="page-wrapper">
@@ -41,11 +44,11 @@
     <a href="#one" class="goto-next scrolly">Next</a>
   </section>
 <!--  TODO: dalej nie działa wygląd strony, poniżej cały czas wyświetla /app/calckred.php...-->
-{
+
   <?php
-			include $conf->root_path.'/app/calckred.php';
+			include _root_path."/app/calckred.php";
   ?>
-}
+
   <!-- Footer -->
   <footer id="footer">
     <ul class="icons">

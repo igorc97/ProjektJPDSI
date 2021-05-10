@@ -1,34 +1,31 @@
 <?php
-/* Smarty version 3.1.30, created on 2021-05-07 03:36:44
+/* Smarty version 3.1.30, created on 2021-05-11 00:19:35
   from "C:\xampp\htdocs\projektkolejny\app\calckred_view.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_609499ac9e43b9_45828742',
+  'unifunc' => 'content_6099b17707b738_10551588',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '364b5e21b954fe8210dc6fce9d35251eca4ab287' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\calckred_view.html',
-      1 => 1620351403,
+      1 => 1620685174,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:../templates/main.html' => 1,
   ),
 ),false)) {
-function content_609499ac9e43b9_45828742 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6099b17707b738_10551588 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
-<?php echo '<?php
-';?>require_once dirname(__FILE__).'/config.php';
-<?php echo '?>';?>
+
 
 <p id="idk">
 <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
@@ -106,16 +103,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 <pre><code id="kod">
 Tu zostanie wyświetlony wynik :)
 
-<?php echo '<?php ';?>if (isset($result)) {
+{
+    <?php echo '<?php ';?>if (isset($result)) {
     echo 'Miesięczny koszt kredytu to(powiedzmy, że): '.$result;
 } <?php echo '?>';?>
-
+}
 
 </code></pre>
 
 
 
 <?php $_smarty_tpl->inheritance->endChild();
-$_smarty_tpl->_subTemplateRender("file:../templates/main.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
+$_smarty_tpl->_subTemplateRender(($_smarty_tpl->tpl_vars['conf']->value->root_path).("/templates/main.php"), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, true);
 }
 }
