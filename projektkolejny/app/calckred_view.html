@@ -1,8 +1,7 @@
 {extends file=$conf->root_path|cat:"/templates/main.php"}
-
-
+{block name = content}
 <p id="idk">
-<form action="{$conf->app_url}/calckred.php" method="post" class="pure-form pure-form-stacked">
+<form action="{$conf->app_url}/app/calckred.php" method="post" class="pure-form pure-form-stacked">
 	<legend>Kalkulator kredytowy</legend>
 	<fieldset>
 		<label for="id_x">Kwota: </label>
@@ -13,56 +12,34 @@
         <input id="id_z" type="text" name="z" value="{$form->z}" />
 	</fieldset>
     <input type="submit" id="przycisk" value="Oblicz" class="pure-button pure-button-primary"/>
+<!--    TODO: przycisk nie działa-->
 </form>
 </p>
 
-
+<pre><code id="kod">
+Tu zostanie wyświetlony wynik :)
+    {if isset($res->result)}
+    {$res->result}
+    {/if}
 
     {* wyświeltenie listy błędów, jeśli istnieją *}
     {if $msgs->isError()}
-    <h4>Wystąpiły błędy: </h4>
-    <ol class="err">
-        {foreach $msgs->getErrors() as $err}
-        {strip}
-        <li>{$err}</li>
-        {/strip}
-        {/foreach}
-    </ol>
+    Wystąpiły błędy:
+    {$err}
     {/if}
 
     {* wyświeltenie listy informacji, jeśli istnieją *}
     {if $msgs->isInfo()}
-    <h4>Informacje: </h4>
-    <ol class="inf">
-        {foreach $msgs->getInfos() as $inf}
-        {strip}
-        <li>{$inf}</li>
-        {/strip}
-        {/foreach}
-    </ol>
+    Informacje:
+    {$inf}
     {/if}
 
     {if isset($res->result)}
-    <h4>Wynik</h4>
-    <p class="res">
-        {$res->result}
-    </p>
+    Wynik:
+    {$res->result}
     {/if}
-
-
-
-
-
-<pre><code id="kod">
-Tu zostanie wyświetlony wynik :)
-
-{
-    <?php if (isset($result)) {
-    echo 'Miesięczny koszt kredytu to(powiedzmy, że): '.$result;
-} ?>
-}
 
 </code></pre>
 
-
+{/block}
 

@@ -39,15 +39,15 @@ require_once dirname(__FILE__).'/config.php';
         <p>
           Powodzenia!</p>
       </header>
-      <span class="image"><img src="assets/css/images/pic04.jpg" alt=""/></span>
+      <span class="image"><img src="assets/css/images/pic04.jpg" alt="tu powinnien być obrazek"/></span>
     </div>
-    <a href="#one" class="goto-next scrolly">Next</a>
+    <a href="#idk" class="goto-next scrolly">Next</a>
   </section>
 <!--  TODO: dalej nie działa wygląd strony, poniżej cały czas wyświetla /app/calckred.php...-->
+<!-- TODO: napewno można to zrobić lepiej -->
 
-  <?php
-			include _root_path."/app/calckred.php";
-  ?>
+{block name=content} Domyślne coś tam {/block}
+
 
   <!-- Footer -->
   <footer id="footer">

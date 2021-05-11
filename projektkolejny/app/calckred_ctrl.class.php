@@ -1,5 +1,5 @@
 <?php
-
+require_once dirname(__FILE__).'/../config.php';
 require_once $conf->root_path.'/lib/smarty/Smarty.class.php';
 require_once $conf->root_path.'/app/calckred_form.class.php';
 require_once $conf->root_path.'/app/calckred_result.class.php';
@@ -58,11 +58,16 @@ class calckred_ctrl{
             $this->form->z = floatval($this->form->z);
             $this->msgs->addInfo('Parametry poprawne.');
 
-            $miesiac = $this->form->y*12;
-            $oproc = ($this->form->z/100)*$this->form->x;
-            $oprocwskalimiesiaca = $oproc / $miesiac;
-            $result =$this->form->x/$miesiac;
-            $result = $result + $oprocwskalimiesiaca;
+            $this->form->miesiac = $this->form->y*12;
+          //  $miesiac = $this->form->y*12;
+            $this->form->oproc = ($this->form->z/100)*$this->form->x;
+           // $oproc = ($this->form->z/100)*$this->form->x;
+            $this->form->oprocwskalimiesiaca = $this->form->oproc / $this->form->miesiac;
+          //  $oprocwskalimiesiaca = $oproc / $miesiac;
+            $this->result->result = $this->form->x/$this->form->miesiac;
+            $this->result->resultfinal = $this->result->result + $this->form->oprocwskalimiesiaca;
+           // $result =$this->form->x/$miesiac;
+         //   $resultfinal = $result + $oprocwskalimiesiaca;
 
         $this->msgs->addInfo('Wykonano obliczenia.');
     }
