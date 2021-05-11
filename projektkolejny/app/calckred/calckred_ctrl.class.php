@@ -1,8 +1,7 @@
 <?php
-require_once dirname(__FILE__).'/../config.php';
 require_once $conf->root_path.'/lib/smarty/Smarty.class.php';
-require_once $conf->root_path.'/app/calckred_form.class.php';
-require_once $conf->root_path.'/app/calckred_result.class.php';
+require_once $conf->root_path.'/app/calckred/calckred_form.class.php';
+require_once $conf->root_path.'/app/calckred/calckred_result.class.php';
 require_once $conf->root_path.'/lib/Messages.class.php';
 
 class calckred_ctrl{
@@ -88,7 +87,7 @@ public function generateView()
     $smarty->assign('form', $this->form);
     $smarty->assign('res', $this->result);
 
-    $smarty->display($conf->root_path.'/app/calckred_view.html');
+    $smarty->display($conf->root_path.'/app/calckred/calckred_view.html');
 }
 }
 

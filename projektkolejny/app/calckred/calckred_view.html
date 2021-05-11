@@ -1,7 +1,7 @@
 {extends file=$conf->root_path|cat:"/templates/main.php"}
 {block name = content}
 <p id="idk">
-<form action="{$conf->app_url}/app/calckred.php" method="post" class="pure-form pure-form-stacked">
+<form action="{$conf->action_root}calcCompute" method="post" class="pure-form pure-form-stacked">
 	<legend>Kalkulator kredytowy</legend>
 	<fieldset>
 		<label for="id_x">Kwota: </label>
