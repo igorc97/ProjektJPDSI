@@ -4,16 +4,14 @@ require_once 'init.php';
 switch ($action) {
     default : // 'calcView'
         // załaduj definicję kontrolera
-        include_once $conf->root_path.'/app/controllers/calckred_ctrl.class.php';
         // utwórz obiekt i uzyj
-        $ctrl = new calckred_ctrl();
+        $ctrl = new app\controllers\calckred_ctrl();
         $ctrl->generateView ();
         break;
     case 'calcCompute' :
         // załaduj definicję kontrolera
-        include_once $conf->root_path.'/app/controllers/calckred_ctrl.class.php';
         // utwórz obiekt i uzyj
-        $ctrl = new calckred_ctrl();
+        $ctrl = new app\controllers\calckred_ctrl();
         $ctrl->process ();
         break;
     case 'action1' :

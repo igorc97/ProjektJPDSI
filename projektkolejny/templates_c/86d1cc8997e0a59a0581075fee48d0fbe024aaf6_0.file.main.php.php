@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.30, created on 2021-05-17 12:09:14
-  from "C:\xampp\htdocs\projektkolejny\app\views\templates\main.php" */
+  from "C:\xampp\htdocs\projektkolejny\app\views\templates\main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '86d1cc8997e0a59a0581075fee48d0fbe024aaf6' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\views\\templates\\main.php',
+      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\views\\templates\\main.tpl',
       1 => 1620693575,
       2 => 'file',
     ),

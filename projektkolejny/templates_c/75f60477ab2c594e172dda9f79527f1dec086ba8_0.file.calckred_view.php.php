@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.30, created on 2021-05-07 03:29:02
-  from "C:\xampp\htdocs\projektkolejny\app\calckred_view.html" */
+  from "C:\xampp\htdocs\projektkolejny\app\calckred_view.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '75f60477ab2c594e172dda9f79527f1dec086ba8' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\calckred_view.html',
+      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\calckred_view.tpl',
       1 => 1620350942,
       2 => 'file',
     ),

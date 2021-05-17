@@ -1,4 +1,5 @@
 <?php
+namespace app\forms;
 class calckred_form{
     public $x;
     public $y;

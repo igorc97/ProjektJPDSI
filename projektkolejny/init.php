@@ -1,8 +1,8 @@
 <?php
 
-require_once dirname(__FILE__).'/core/Config.class.php';
-$conf = new Config();
-include dirname(__FILE__).'/config.php';
+require_once 'core/Config.class.php';
+$conf = new core\Config();
+require_once 'config.php';
 
 function &getConf()
 {
@@ -11,8 +11,8 @@ function &getConf()
 }
 
 
-require_once getConf()->root_path.'/core/Messages.class.php';
-$msgs = new Messages();
+require_once 'core/Messages.class.php';
+$msgs = new core\Messages();
 
 function &getMessages()
 {
@@ -27,7 +27,7 @@ function &getSmarty()
     global $smarty;
     if (!isset($smarty)) {
         //stwórz Smarty i przypisz konfigurację i messages
-        include_once getConf()->root_path.'/lib/smarty/Smarty.class.php';
+        include_once 'lib/smarty/Smarty.class.php';
         $smarty = new Smarty();
         //przypisz konfigurację i messages
         $smarty->assign('conf', getConf());
@@ -40,7 +40,13 @@ function &getSmarty()
     }
     return $smarty;
 }
+require_once 'core/ClassLoader.class.php';
+$cloader = new core\ClassLoader();
+function &getLoader(){
+    global $cloader;
+    return $cloader;
+}
 
-require_once getConf()->root_path.'/core/functions.php';
+require_once 'core/functions.php';
 
 $action = getFromRequest('action');

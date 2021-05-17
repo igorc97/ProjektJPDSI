@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.30, created on 2021-05-17 12:09:14
-  from "C:\xampp\htdocs\projektkolejny\app\views\calckred_view.html" */
+  from "C:\xampp\htdocs\projektkolejny\app\views\calckred_view.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,14 +11,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '0186e999b5f02f3b3acb0b820c52687c6d3d8a56' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\views\\calckred_view.html',
+      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\views\\calckred_view.tpl',
       1 => 1621244344,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:main.php' => 1,
+    'file:main.tpl' => 1,
   ),
 ),false)) {
 function content_60a240ca865b49_77412242 (Smarty_Internal_Template $_smarty_tpl) {
@@ -32,7 +32,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_196668780060a240ca
 
 
 <?php $_smarty_tpl->inheritance->endChild();
-$_smarty_tpl->_subTemplateRender("file:main.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
+$_smarty_tpl->_subTemplateRender("file:main.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'content'} */
 class Block_196668780060a240ca864e77_26454117 extends Smarty_Internal_Block

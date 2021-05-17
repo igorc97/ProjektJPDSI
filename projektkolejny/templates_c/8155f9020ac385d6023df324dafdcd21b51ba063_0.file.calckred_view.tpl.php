@@ -1,47 +1,48 @@
 <?php
-/* Smarty version 3.1.30, created on 2021-05-11 03:26:35
-  from "C:\xampp\htdocs\projektkolejny\app\calckred_view.tpl" */
+/* Smarty version 3.1.30, created on 2021-05-17 13:03:28
+  from "C:\xampp\htdocs\projektkolejny\app\views\calckred_view.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_6099dd4bc45294_91776589',
+  'unifunc' => 'content_60a24d8004ccd1_02488433',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '364b5e21b954fe8210dc6fce9d35251eca4ab287' => 
+    '8155f9020ac385d6023df324dafdcd21b51ba063' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\calckred_view.tpl',
-      1 => 1620696368,
+      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\views\\calckred_view.tpl',
+      1 => 1621249247,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:main.tpl' => 1,
   ),
 ),false)) {
-function content_6099dd4bc45294_91776589 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60a24d8004ccd1_02488433 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7952029046099dd4bc44dc0_38841563', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_145739687160a24d8004c301_45730465', 'content');
 ?>
 
 
 <?php $_smarty_tpl->inheritance->endChild();
-$_smarty_tpl->_subTemplateRender(($_smarty_tpl->tpl_vars['conf']->value->root_path).("/templates/main.tpl"), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, true);
+$_smarty_tpl->_subTemplateRender("file:main.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'content'} */
-class Block_7952029046099dd4bc44dc0_38841563 extends Smarty_Internal_Block
+class Block_145739687160a24d8004c301_45730465 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <p id="idk">
-<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
-/app/calckred.php" method="post" class="pure-form pure-form-stacked">
+<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+calcCompute" method="post" class="pure-form pure-form-stacked">
 	<legend>Kalkulator kredytowy</legend>
 	<fieldset>
 		<label for="id_x">Kwota: </label>
@@ -55,7 +56,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 " />
 	</fieldset>
     <input type="submit" id="przycisk" value="Oblicz" class="pure-button pure-button-primary"/>
-<!--    TODO: przycisk nie działa-->
 </form>
 </p>
 
@@ -85,7 +85,7 @@ Tu zostanie wyświetlony wynik :)
     <?php echo $_smarty_tpl->tpl_vars['res']->value->result;?>
 
     <?php }?>
-
+<!--TODO: Poprawić to! -->
 </code></pre>
 
 <?php

@@ -1,4 +1,4 @@
-{extends file="main.php"}
+{extends file="main.tpl"}
 {block name = content}
 <p id="idk">
 <form action="{$conf->action_root}calcCompute" method="post" class="pure-form pure-form-stacked">

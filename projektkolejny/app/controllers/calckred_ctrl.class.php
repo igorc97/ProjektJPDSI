@@ -1,6 +1,7 @@
 <?php
-require_once 'calckred_form.class.php';
-require_once 'calckred_result.class.php';
+namespace app\controllers;
+use app\forms\calckred_form;
+use app\transfer\calckred_result;
 
 class calckred_ctrl{
     private $form;
@@ -76,7 +77,7 @@ public function generateView()
     getSmarty()->assign('form', $this->form);
     getSmarty()->assign('res', $this->result);
 
-    getSmarty()->display('calckred_view.html');
+    getSmarty()->display('calckred_view.tpl');
 }
 }
 

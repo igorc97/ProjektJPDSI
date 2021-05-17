@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.30, created on 2021-05-11 08:47:38
-  from "C:\xampp\htdocs\projektkolejny\templates\main.tpl" */
+/* Smarty version 3.1.30, created on 2021-05-17 13:03:28
+  from "C:\xampp\htdocs\projektkolejny\app\views\templates\main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_609a288a7e2d27_03459930',
+  'unifunc' => 'content_60a24d800c4151_77187564',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '46005d21376b5d3df2a8e87bfa2e7bf8c2cf9a8a' => 
+    'b2d2da72c86f2fd746d5525ec58503371d706b27' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\projektkolejny\\templates\\main.tpl',
+      0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\views\\templates\\main.tpl',
       1 => 1620693575,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_609a288a7e2d27_03459930 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60a24d800c4151_77187564 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 echo '<?php
@@ -72,7 +72,7 @@ echo '<?php
 <!-- TODO: napewno można to zrobić lepiej -->
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2059043557609a288a7e2946_58653387', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_103426936360a24d800c3d52_70076891', 'content');
 ?>
 
 
@@ -120,7 +120,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2059043557609a288a
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_2059043557609a288a7e2946_58653387 extends Smarty_Internal_Block
+class Block_103426936360a24d800c3d52_70076891 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
