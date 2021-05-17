@@ -1,4 +1,4 @@
-{extends file=$conf->root_path|cat:"/templates/main.php"}
+{extends file="main.php"}
 {block name = content}
 <p id="idk">
 <form action="{$conf->action_root}calcCompute" method="post" class="pure-form pure-form-stacked">
@@ -12,7 +12,6 @@
         <input id="id_z" type="text" name="z" value="{$form->z}" />
 	</fieldset>
     <input type="submit" id="przycisk" value="Oblicz" class="pure-button pure-button-primary"/>
-<!--    TODO: przycisk nie działa-->
 </form>
 </p>
 
@@ -38,7 +37,7 @@ Tu zostanie wyświetlony wynik :)
     Wynik:
     {$res->result}
     {/if}
-
+<!--TODO: Poprawić to! -->
 </code></pre>
 
 {/block}

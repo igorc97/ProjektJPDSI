@@ -1,25 +1,21 @@
 <?php
-require_once $conf->root_path.'/lib/smarty/Smarty.class.php';
-require_once $conf->root_path.'/app/calckred/calckred_form.class.php';
-require_once $conf->root_path.'/app/calckred/calckred_result.class.php';
-require_once $conf->root_path.'/lib/Messages.class.php';
+require_once 'calckred_form.class.php';
+require_once 'calckred_result.class.php';
 
 class calckred_ctrl{
-    private $msgs;
     private $form;
     private $result;
 
     public function __construct()
     {
-        $this->msgs = new Messages();
         $this->form = new calckred_form();
         $this->result = new calckred_result();
     }
 
     public function getParams(){
-        $this->form->x = isset($_REQUEST['x']) ? $_REQUEST['x'] : null;
-        $this->form->y = isset($_REQUEST['y']) ? $_REQUEST['y'] : null;
-        $this->form->z = isset($_REQUEST['z']) ? $_REQUEST['z'] : null;
+        $this->form->x = getFromRequest('x');
+        $this->form->y = getFromRequest('y');
+        $this->form->z = getFromRequest('z');
     }
 
     public function validate(){
@@ -36,16 +32,15 @@ class calckred_ctrl{
         if ($this->form->z == "") {
             $this->msgs->addError('Nie podano oprocentowania');
         }
-        if (! $this->msgs->isError()){
-            if (! is_numeric($this->form->x)) {
-                $this->msgs->addError('Kwota nie jest liczbą całkowitą');
+        if(!getMessages()->isError()){
+            if(!is_numeric($this->form->x)){
+                getMessages()->addError('Pierwsza wartość nie jest liczbą całkowitą');
             }
-            if (! is_numeric($this->form->z)) {
-                $this->msgs->addError('Oprocentowanie nie jest liczbą całkowitą');
+            if(!is_numeric($this->form->y)){
+                getMessages()->addError('Druga wartość nie jest liczbą całkowitą');
             }
         }
-
-        return ! $this->msgs->isError();
+        return ! getMessages()->isError();
     }
     public function process(){
 
@@ -55,7 +50,7 @@ class calckred_ctrl{
             $this->form->x = intval($this->form->x);
             $this->form->y = intval($this->form->y);
             $this->form->z = floatval($this->form->z);
-            $this->msgs->addInfo('Parametry poprawne.');
+            getMessages()->addInfo('Parametry poprawne');
 
             $this->form->miesiac = $this->form->y*12;
           //  $miesiac = $this->form->y*12;
@@ -68,26 +63,20 @@ class calckred_ctrl{
            // $result =$this->form->x/$miesiac;
          //   $resultfinal = $result + $oprocwskalimiesiaca;
 
-        $this->msgs->addInfo('Wykonano obliczenia.');
+        getMessages()->addInfo('Wykonano obliczenia');
     }
         $this->generateView();
 }
 public function generateView()
 {
-    global $conf;
+    getSmarty()->assign('page_title', 'Kalkulator kredytowy');
+    getSmarty()->assign('page_description', 'Zapraszam do skorzystania z kalkulatora');
+    getSmarty()->assign('page_header', '1234');
 
-    $smarty = new Smarty();
-    $smarty->assign('conf', $conf);
+    getSmarty()->assign('form', $this->form);
+    getSmarty()->assign('res', $this->result);
 
-    $smarty->assign('page_title', 'Kalkulator kredytowy');
-    $smarty->assign('page_description', 'Zapraszam do skorzystania z kalkulatora');
-    $smarty->assign('page_header', '1234');
-
-    $smarty->assign('msgs', $this->msgs);
-    $smarty->assign('form', $this->form);
-    $smarty->assign('res', $this->result);
-
-    $smarty->display($conf->root_path.'/app/calckred/calckred_view.html');
+    getSmarty()->display('calckred_view.html');
 }
 }
 
