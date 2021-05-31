@@ -65,6 +65,31 @@ class calckred_ctrl{
          //   $resultfinal = $result + $oprocwskalimiesiaca;
 
         getMessages()->addInfo('Wykonano obliczenia');
+            try {
+                $database = new \Medoo\Medoo([
+                   'database_type' => 'mysql',
+                   'database_name' => 'kredyt',
+                   'server' => 'localhost',
+                   'username' => 'root',
+                   'password' => '',
+                   'charset' => 'utf8',
+                   'collation' => 'utf8_polish_ci',
+                   'port' => 3306,
+                   'option' => [
+                       \PDO::ATTR_CASE => \PDO::CASE_NATURAL,
+                       \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
+                   ]
+                ]);
+                $database->insert("wynik",[
+                    "kwota" => $this->form->x,
+                    "lat" => $this->form->y,
+                    "procent" => $this->form->z,
+                    "rata" => $this->result->resultfinal,
+                    "data" => date("Y-m-d H:i:s")
+                ]);
+            } catch (\PDOException $exception){
+                getMessages()->addError("DB Error: ".$exception->getMessage());
+            }
     }
         $this->generateView();
 }
