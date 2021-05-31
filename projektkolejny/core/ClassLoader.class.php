@@ -1,7 +1,5 @@
 <?php
-
 namespace core;
-
 
 class ClassLoader
 {

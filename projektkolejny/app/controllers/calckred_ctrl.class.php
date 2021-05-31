@@ -43,7 +43,7 @@ class calckred_ctrl{
         }
         return ! getMessages()->isError();
     }
-    public function process(){
+    public function action_calcCompute(){
 
         $this->getParams();
 
@@ -68,12 +68,15 @@ class calckred_ctrl{
     }
         $this->generateView();
 }
-public function generateView()
-{
-    getSmarty()->assign('page_title', 'Kalkulator kredytowy');
-    getSmarty()->assign('page_description', 'Zapraszam do skorzystania z kalkulatora');
-    getSmarty()->assign('page_header', '1234');
+    public function action_calcShow(){
+        getMessages()->addInfo('Witaj w kalkulatorze');
+        $this->generateView();
+    }
 
+    public function generateView()
+{
+    getSmarty()->assign('user',unserialize($_SESSION['user']));
+    getSmarty()->assign('page_title','Role');
     getSmarty()->assign('form', $this->form);
     getSmarty()->assign('res', $this->result);
 

@@ -21,11 +21,15 @@ require_once dirname(__FILE__).'/config.php';
   <!-- Header -->
   <header id="header">
     <h1 id="logo"><a href="index.php">Kalkulator</a></h1>
+
+
     <nav id="nav">
       <ul>
         <li><a href="index.php">Home</a></li>
 
         <li><a href="#idk">Elements</a></li>
+
+        <li><a href="{$conf->action_url}logout">Wyloguj</a></li>
 
       </ul>
     </nav>
@@ -43,8 +47,6 @@ require_once dirname(__FILE__).'/config.php';
     </div>
     <a href="#idk" class="goto-next scrolly">Next</a>
   </section>
-<!--  TODO: dalej nie działa wygląd strony, poniżej cały czas wyświetla /app/calckred.php...-->
-<!-- TODO: napewno można to zrobić lepiej -->
 
 {block name=content} Domyślne coś tam {/block}
 

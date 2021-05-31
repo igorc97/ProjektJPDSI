@@ -9,8 +9,6 @@ function &getConf()
     global $conf;
     return $conf;
 }
-
-
 require_once 'core/Messages.class.php';
 $msgs = new core\Messages();
 
@@ -47,6 +45,15 @@ function &getLoader(){
     return $cloader;
 }
 
+require_once 'core/Router.class.php';
+$router = new core\Router();
+function &getRouter(): core\Router{
+    global $router;
+    return $router;
+}
 require_once 'core/functions.php';
 
-$action = getFromRequest('action');
+session_start(); //uruchom lub kontynuuj sesję
+$conf->roles = isset($_SESSION['_roles']) ? unserialize($_SESSION['_roles']) : array(); //wczytaj role
+
+$router->setAction( getFromRequest('action') );

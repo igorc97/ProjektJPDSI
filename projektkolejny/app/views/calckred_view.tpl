@@ -1,5 +1,6 @@
 {extends file="main.tpl"}
 {block name = content}
+
 <p id="idk">
 <form action="{$conf->action_root}calcCompute" method="post" class="pure-form pure-form-stacked">
 	<legend>Kalkulator kredytowy</legend>
@@ -39,6 +40,6 @@ Tu zostanie wyświetlony wynik :)
     {/if}
 <!--TODO: Poprawić to! -->
 </code></pre>
-
+{*	TODO: <span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>*}
 {/block}
 

@@ -1,29 +1,12 @@
 <?php
 require_once 'init.php';
 
-switch ($action) {
-    default : // 'calcView'
-        // załaduj definicję kontrolera
-        // utwórz obiekt i uzyj
-        $ctrl = new app\controllers\calckred_ctrl();
-        $ctrl->generateView ();
-        break;
-    case 'calcCompute' :
-        // załaduj definicję kontrolera
-        // utwórz obiekt i uzyj
-        $ctrl = new app\controllers\calckred_ctrl();
-        $ctrl->process ();
-        break;
-    case 'action1' :
+getRouter()->setDefaultRoute('calcShow');
+getRouter()->setLoginRoute('login');
 
-        break;
-    case 'action2' :
+getRouter()->addRoute('calcShow',    'calckred_ctrl',  ['user','admin']);
+getRouter()->addRoute('calcCompute', 'calckred_ctrl',  ['user','admin']);
+getRouter()->addRoute('login',       'LoginCtrl');
+getRouter()->addRoute('logout',      'LoginCtrl', ['user','admin']);
 
-        break;
-}
-//// kontroler
-//require_once $conf->root_path.'/app/calckred_ctrl.class.php';
-//
-////tworzenie obiektu
-//$ctrl = new calckred_ctrl();
-//$ctrl->process();
+getRouter()->go();

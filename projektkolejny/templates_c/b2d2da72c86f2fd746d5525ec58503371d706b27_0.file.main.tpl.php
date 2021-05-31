@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2021-05-17 13:03:28
+/* Smarty version 3.1.30, created on 2021-05-31 18:41:58
   from "C:\xampp\htdocs\projektkolejny\app\views\templates\main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_60a24d800c4151_77187564',
+  'unifunc' => 'content_60b511d6b89d34_09172554',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2d2da72c86f2fd746d5525ec58503371d706b27' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projektkolejny\\app\\views\\templates\\main.tpl',
-      1 => 1620693575,
+      1 => 1622477644,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60a24d800c4151_77187564 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60b511d6b89d34_09172554 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 echo '<?php
@@ -46,11 +46,16 @@ echo '<?php
   <!-- Header -->
   <header id="header">
     <h1 id="logo"><a href="index.php">Kalkulator</a></h1>
+
+
     <nav id="nav">
       <ul>
         <li><a href="index.php">Home</a></li>
 
         <li><a href="#idk">Elements</a></li>
+
+        <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+logout">Wyloguj</a></li>
 
       </ul>
     </nav>
@@ -68,11 +73,9 @@ echo '<?php
     </div>
     <a href="#idk" class="goto-next scrolly">Next</a>
   </section>
-<!--  TODO: dalej nie działa wygląd strony, poniżej cały czas wyświetla /app/calckred.php...-->
-<!-- TODO: napewno można to zrobić lepiej -->
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_103426936360a24d800c3d52_70076891', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_67577947760b511d6b89650_14443685', 'content');
 ?>
 
 
@@ -120,7 +123,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_103426936360a24d80
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_103426936360a24d800c3d52_70076891 extends Smarty_Internal_Block
+class Block_67577947760b511d6b89650_14443685 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
