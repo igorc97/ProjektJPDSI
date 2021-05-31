@@ -29,6 +29,9 @@ require_once dirname(__FILE__).'/config.php';
 
         <li><a href="#idk">Elements</a></li>
 
+        <li><a href="ResultsCtrl.class.php">Lista</a></li>
+        {*TODO: przejscie do listy, pokazanie rekordów*}
+
         <li><a href="{$conf->action_url}logout">Wyloguj</a></li>
 
       </ul>

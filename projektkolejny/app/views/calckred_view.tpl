@@ -19,7 +19,7 @@
 <pre><code id="kod">
 Tu zostanie wyświetlony wynik :)
     {if isset($res->result)}
-    {$res->result}
+    {$res->resultfinal}
     {/if}
 
     {* wyświeltenie listy błędów, jeśli istnieją *}
@@ -34,11 +34,7 @@ Tu zostanie wyświetlony wynik :)
     {$inf}
     {/if}
 
-    {if isset($res->result)}
-    Wynik:
-    {$res->result}
-    {/if}
-<!--TODO: Poprawić to! -->
+
 </code></pre>
 {*	TODO: <span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>*}
 {/block}
